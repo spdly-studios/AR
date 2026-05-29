@@ -96,10 +96,15 @@
     <!-- Hero -->
     <section id="home" class="hero" aria-label="Hero">
       <canvas id="spaceCanvas" aria-hidden="true"></canvas>
-      <div class="hero-banner-layer" aria-hidden="true">
-        <div class="banner-img" style="background-image: url('assets/banner.png');"></div>
-        <div class="banner-fade"></div>
+      <div class="hero-bg-layer" aria-hidden="true">
+        <div class="hero-bg-img" style="background-image: url('assets/hero_bg.png');"></div>
+        <div class="hero-bg-fade"></div>
       </div>
+      <div class="hero-glow-layer" aria-hidden="true">
+        <div class="hero-glow hero-glow--saffron"></div>
+        <div class="hero-glow hero-glow--green"></div>
+      </div>
+      <div class="hero-grid-overlay" aria-hidden="true"></div>
       <div class="hero-content reveal-hero">
         <div class="hero-eyebrow">A Humanitarian Space Initiative</div>
         <h1 class="hero-title">
@@ -142,7 +147,10 @@
           </blockquote>
         </div>
         <div class="vision-right reveal-fade-delay" aria-hidden="true">
-          <div class="vision-orb"></div>
+          <div class="vision-earth-container">
+            <canvas id="earthCanvas"></canvas>
+            <div class="earth-instructions">Drag to Rotate</div>
+          </div>
         </div>
       </div>
     </section>
