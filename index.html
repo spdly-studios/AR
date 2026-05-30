@@ -1,492 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AkshaRaksha — Keeping Hope Connected</title>
-  <meta name="description" content="AkshaRaksha is a satellite-assisted emergency communication initiative designed to ensure that no person becomes unreachable during a disaster." />
-  <meta name="keywords" content="AkshaRaksha, satellite communication, emergency communication, disaster relief, humanitarian, resilient network, India" />
-  <meta name="author" content="Shivaprasad V" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://aksharaksha.in/" />
-  <meta name="theme-color" content="#0a0b0d" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="AkshaRaksha — Keeping Hope Connected" />
-  <meta property="og:description" content="A satellite-assisted emergency communication initiative ensuring no person becomes unreachable during a disaster." />
-  <meta property="og:image" content="assets/logo.png" />
-  <meta property="og:url" content="https://aksharaksha.in/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="AkshaRaksha" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AkshaRaksha — Keeping Hope Connected" />
-  <meta name="twitter:description" content="A satellite-assisted emergency communication initiative ensuring no person becomes unreachable during a disaster." />
-  <meta name="twitter:image" content="assets/logo.png" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/logo.png" />
-  <link rel="apple-touch-icon" href="assets/logo.png" />
-
-  <!-- Manifest -->
-  <link rel="manifest" href="data:application/json,{&quot;name&quot;:&quot;AkshaRaksha&quot;,&quot;short_name&quot;:&quot;AkshaRaksha&quot;,&quot;icons&quot;:[{&quot;src&quot;:&quot;assets/logo.png&quot;,&quot;sizes&quot;:&quot;192x192&quot;}],&quot;theme_color&quot;:&quot;#0a0b0d&quot;,&quot;background_color&quot;:&quot;#0a0b0d&quot;,&quot;display&quot;:&quot;standalone&quot;}" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Unbounded:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://aksharaksha.in/#website",
-        "url": "https://aksharaksha.in/",
-        "name": "AkshaRaksha",
-        "description": "Satellite-assisted emergency communication initiative",
-        "author": {
-          "@type": "Person",
-          "name": "Shivaprasad V"
-        }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://spdly.is-a.dev/#person",
-        "name": "Shivaprasad V",
-        "url": "https://spdly.is-a.dev",
-        "jobTitle": "Independent Researcher and Developer",
-        "description": "Founder of AkshaRaksha, researching and developing satellite-assisted emergency communication systems."
-      }
-    ]
-  }
-  </script>
-
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AkshaRaksha — Keeping Hope Connected</title>
+<meta name="description" content="A humanitarian space mission dedicated to ensuring emergency communication remains possible when terrestrial networks fail.">
+<meta property="og:title" content="AkshaRaksha — Keeping Hope Connected">
+<meta property="og:description" content="A humanitarian space mission ensuring emergency communication when disaster strikes.">
+<meta property="og:image" content="assets/og_banner.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Koulen&family=Unbounded:wght@200;300;400;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav id="nav" role="navigation" aria-label="Main navigation">
-    <div class="nav-inner">
-      <a href="#home" class="nav-logo" aria-label="AkshaRaksha home">
-        <img src="assets/logo.png" alt="AkshaRaksha logo" width="32" height="32" />
-        <span class="nav-name"><span class="aksha">Aksha</span><span class="raksha">Raksha</span></span>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks" role="list">
-        <li><a href="#mission" class="nav-link">Mission</a></li>
-        <li><a href="#why" class="nav-link">Why It Matters</a></li>
-        <li><a href="#solution" class="nav-link">Solution</a></li>
-        <li><a href="#development" class="nav-link">Development Plan</a></li>
-        <li><a href="#progress" class="nav-link">Progress</a></li>
-        <li><a href="#founder" class="nav-link">Founder</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
+<div id="bg-music-prompt">
+  <div class="music-inner">
+    <div class="music-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
     </div>
-  </nav>
+    <span>Play ambient soundtrack</span>
+    <button id="music-yes">Enable</button>
+    <button id="music-no">Skip</button>
+  </div>
+</div>
 
-  <main>
+<audio id="bg-audio" loop preload="auto">
+  <source src="assets/bg.webm" type="audio/webm">
+</audio>
 
-    <!-- Hero -->
-    <section id="home" class="hero" aria-label="Hero">
-      <canvas id="spaceCanvas" aria-hidden="true"></canvas>
-      <div class="hero-bg-layer" aria-hidden="true">
-        <div class="hero-bg-img" style="background-image: url('assets/hero_bg.png');"></div>
-        <div class="hero-bg-fade"></div>
+<div id="music-toggle" class="music-toggle hidden" title="Toggle music">
+  <svg class="icon-music-on" width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+  <svg class="icon-music-off hidden" width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="2" y1="2" x2="22" y2="22" stroke="currentColor" stroke-width="1.5"/></svg>
+</div>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <span class="brand-word"><span class="aksha">Aksha</span><span class="raksha">Raksha</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#mission">Mission</a>
+      <a href="#how">How It Works</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#founder">Founder</a>
+      <a href="#join" class="nav-cta">Join</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="#mission">Mission</a>
+    <a href="#how">How It Works</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#founder">Founder</a>
+    <a href="#join">Join</a>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="hero-bg">
+    <img src="assets/hero_bg.webp" alt="" class="hero-bg-img" id="hero-bg-img">
+    <div class="hero-bg-overlay"></div>
+    <div class="stars-layer" id="stars-layer"></div>
+  </div>
+
+  <canvas id="orbit-canvas"></canvas>
+
+  <div class="hero-content" id="hero-content">
+    <div class="hero-badge reveal-up" style="--d:0s">
+      <span class="badge-dot"></span>
+      <span>Humanitarian Space Initiative</span>
+    </div>
+    <h1 class="hero-title reveal-up" style="--d:0.15s">
+      <span class="brand-word"><span class="aksha">Aksha</span><span class="raksha">Raksha</span></span>
+    </h1>
+    <p class="hero-tagline reveal-up" style="--d:0.3s">Keeping Hope Connected</p>
+    <p class="hero-sub reveal-up" style="--d:0.45s">
+      When disaster strikes and terrestrial networks fail,<br>emergency communication must not.
+    </p>
+    <div class="hero-actions reveal-up" style="--d:0.6s">
+      <a href="#mission" class="btn-primary">Explore Mission</a>
+      <a href="#roadmap" class="btn-secondary">View Roadmap</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll-indicator">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<section id="problem">
+  <div class="parallax-layer" data-speed="0.04"></div>
+  <div class="container">
+    <div class="problem-grid">
+      <div class="problem-text reveal-left">
+        <div class="section-label">The Problem</div>
+        <h2>When disaster strikes,<br><em>communication is first to fail.</em></h2>
+        <p>Modern connectivity depends entirely on ground-based infrastructure — towers, cables, exchanges, and power grids. In moments of crisis, these systems collapse exactly when people need them most.</p>
       </div>
-      <div class="hero-glow-layer" aria-hidden="true">
-        <div class="hero-glow hero-glow--saffron"></div>
-        <div class="hero-glow hero-glow--green"></div>
-      </div>
-      <div class="hero-grid-overlay" aria-hidden="true"></div>
-      <div class="hero-content reveal-hero">
-        <div class="hero-eyebrow">A Humanitarian Space Initiative</div>
-        <h1 class="hero-title">
-          <span class="aksha">Aksha</span><span class="raksha">Raksha</span>
-        </h1>
-        <p class="hero-tagline">Keeping Hope Connected</p>
-        <p class="hero-desc">A resilient satellite-assisted emergency communication network designed to ensure that no person becomes unreachable during a disaster.</p>
-        <div class="hero-actions">
-          <a href="#mission" class="btn-primary">Explore The Mission</a>
-          <a href="#development" class="btn-ghost">View Development Plan</a>
+      <div class="problem-cards reveal-right">
+        <div class="disaster-card" style="--i:0" data-tilt>
+          <div class="disaster-icon">&#127755;</div>
+          <div class="disaster-name">Earthquakes</div>
+          <div class="disaster-desc">Destroy infrastructure instantly</div>
         </div>
-      </div>
-      <div class="hero-scroll-cue" aria-hidden="true">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-      </div>
-    </section>
-
-    <!-- Mission -->
-    <section id="mission" class="section-mission" aria-labelledby="mission-heading">
-      <div class="mission-inner">
-        <div class="mission-label reveal-fade">Mission</div>
-        <h2 id="mission-heading" class="mission-heading reveal-up">
-          To provide reliable emergency communication during disasters when conventional systems become unavailable.
-        </h2>
-        <div class="mission-body reveal-fade-delay">
-          <p>When floods swallow towers. When earthquakes sever cables. When cyclones darken entire regions. Conventional communication infrastructure is fragile precisely when it is needed most.</p>
-          <p>AkshaRaksha exists to close that gap — building communication paths that persist when everything else fails.</p>
+        <div class="disaster-card" style="--i:1" data-tilt>
+          <div class="disaster-icon">&#127754;</div>
+          <div class="disaster-name">Floods</div>
+          <div class="disaster-desc">Isolate entire communities</div>
         </div>
-      </div>
-    </section>
-
-    <!-- Vision -->
-    <section id="vision" class="section-vision" aria-labelledby="vision-heading">
-      <div class="vision-inner">
-        <div class="vision-left reveal-fade">
-          <div class="vision-label">Vision</div>
-          <blockquote class="vision-quote reveal-up">
-            Every person can request help and remain connected during emergencies — regardless of the condition of terrestrial communication infrastructure.
-          </blockquote>
+        <div class="disaster-card" style="--i:2" data-tilt>
+          <div class="disaster-icon">&#127744;</div>
+          <div class="disaster-name">Cyclones</div>
+          <div class="disaster-desc">Bring down communication towers</div>
         </div>
-        <div class="vision-right reveal-fade-delay" aria-hidden="true">
-          <div class="vision-earth-container">
-            <canvas id="earthCanvas"></canvas>
-            <div class="earth-instructions">Drag to Rotate</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why It Matters -->
-    <section id="why" class="section-why" aria-labelledby="why-heading">
-      <div class="why-inner">
-        <div class="why-header">
-          <div class="why-label reveal-fade">Why It Matters</div>
-          <h2 id="why-heading" class="why-heading reveal-up">Communication failures cost lives.</h2>
-        </div>
-
-        <div class="why-narrative">
-          <div class="why-moment reveal-left">
-            <div class="why-moment-number" aria-hidden="true">01</div>
-            <div class="why-moment-content">
-              <h3>Floods</h3>
-              <p>Rising waters isolate entire villages within hours. Families climb to rooftops. Rescue teams circle overhead with no way to know where survivors are. Minutes become hours. Hours become decisions no one should have to make.</p>
-            </div>
-          </div>
-
-          <div class="why-moment reveal-right">
-            <div class="why-moment-number" aria-hidden="true">02</div>
-            <div class="why-moment-content">
-              <h3>Cyclones &amp; Earthquakes</h3>
-              <p>A cyclone's first casualty is often the cell tower. An earthquake's first casualty is often the power grid. When infrastructure collapses, the people who need help most become the people who cannot ask for it.</p>
-            </div>
-          </div>
-
-          <div class="why-moment reveal-left">
-            <div class="why-moment-number" aria-hidden="true">03</div>
-            <div class="why-moment-content">
-              <h3>Landslides &amp; Blackouts</h3>
-              <p>Remote communities face communication blackouts for days after a disaster. Not because they lack will. Not because rescuers don't care. Because the channel between them simply no longer exists.</p>
-            </div>
-          </div>
-
-          <div class="why-closing reveal-up">
-            <p class="why-closing-text">AkshaRaksha is the answer to a question that should not need asking: <em>Why can't we reach them?</em></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Solution -->
-    <section id="solution" class="section-solution" aria-labelledby="solution-heading">
-      <div class="solution-inner">
-        <div class="solution-header">
-          <div class="solution-label reveal-fade">The Approach</div>
-          <h2 id="solution-heading" class="solution-heading reveal-up">The AkshaRaksha Approach</h2>
-          <p class="solution-sub reveal-fade-delay">A chain of resilience — from the person in crisis to the team that responds.</p>
-        </div>
-
-        <div class="solution-flow" role="list">
-          <div class="flow-step reveal-flow" role="listitem" style="--i:0">
-            <div class="flow-step-inner">
-              <div class="flow-icon" aria-hidden="true">
-                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M10 34c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-              </div>
-              <div class="flow-label">Person</div>
-              <div class="flow-desc">A person in distress, cut off from all conventional communication.</div>
-            </div>
-            <div class="flow-connector" aria-hidden="true"></div>
-          </div>
-
-          <div class="flow-step reveal-flow" role="listitem" style="--i:1">
-            <div class="flow-step-inner">
-              <div class="flow-icon" aria-hidden="true">
-                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="14" width="24" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M15 14v-3a5 5 0 0 1 10 0v3" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="22" r="2" fill="currentColor"/></svg>
-              </div>
-              <div class="flow-label">Emergency Device</div>
-              <div class="flow-desc">A dedicated low-power device that transmits a distress signal independent of ground infrastructure.</div>
-            </div>
-            <div class="flow-connector" aria-hidden="true"></div>
-          </div>
-
-          <div class="flow-step reveal-flow" role="listitem" style="--i:2">
-            <div class="flow-step-inner">
-              <div class="flow-icon" aria-hidden="true">
-                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6 L34 34 L20 28 L6 34 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><line x1="20" y1="6" x2="20" y2="28" stroke="currentColor" stroke-width="1.5"/></svg>
-              </div>
-              <div class="flow-label">Communication Network</div>
-              <div class="flow-desc">The AkshaRaksha satellite network receives and relays the signal — bypassing all terrestrial failures.</div>
-            </div>
-            <div class="flow-connector" aria-hidden="true"></div>
-          </div>
-
-          <div class="flow-step reveal-flow" role="listitem" style="--i:3">
-            <div class="flow-step-inner">
-              <div class="flow-icon" aria-hidden="true">
-                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="18" width="28" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M12 18v-4a8 8 0 0 1 16 0v4" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="26" r="2.5" fill="currentColor"/></svg>
-              </div>
-              <div class="flow-label">Control Center</div>
-              <div class="flow-desc">A ground control station receives the transmission, decodes the location, and initiates response protocols.</div>
-            </div>
-            <div class="flow-connector" aria-hidden="true"></div>
-          </div>
-
-          <div class="flow-step reveal-flow" role="listitem" style="--i:4">
-            <div class="flow-step-inner">
-              <div class="flow-icon" aria-hidden="true">
-                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 8 L28 26 H12 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/><path d="M14 32 h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M17 26 v6 M23 26 v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-              </div>
-              <div class="flow-label">Rescue Team</div>
-              <div class="flow-desc">Responders reach the person — because the signal got through.</div>
-            </div>
-          </div>
+        <div class="disaster-card" style="--i:3" data-tilt>
+          <div class="disaster-icon">&#128293;</div>
+          <div class="disaster-name">Wildfires</div>
+          <div class="disaster-desc">Cut off entire regions</div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Development Plan -->
-    <section id="development" class="section-development" aria-labelledby="dev-heading">
-      <div class="dev-inner">
-        <div class="dev-header">
-          <div class="dev-label reveal-fade">Development Plan</div>
-          <h2 id="dev-heading" class="dev-heading reveal-up">The Mission Roadmap</h2>
-          <p class="dev-sub reveal-fade-delay">Each phase is a milestone in a long-range mission. Progress is deliberate, grounded, and transparent.</p>
+    <div class="consequence-strip reveal-up">
+      <div class="consequence-item">
+        <div class="con-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M15 9l-6 6M9 9l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
+        <p>Victims cannot request assistance</p>
+      </div>
+      <div class="consequence-divider"></div>
+      <div class="consequence-item">
+        <div class="con-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M15 9l-6 6M9 9l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <p>Families cannot communicate safety</p>
+      </div>
+      <div class="consequence-divider"></div>
+      <div class="consequence-item">
+        <div class="con-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M15 9l-6 6M9 9l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <p>Responders lose critical information</p>
+      </div>
+      <div class="consequence-divider"></div>
+      <div class="consequence-item">
+        <div class="con-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M15 9l-6 6M9 9l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <p>Rescue operations slow and fail</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="timeline" role="list">
+<section id="mission">
+  <div class="parallax-layer" data-speed="0.06"></div>
+  <div class="container">
+    <div class="mission-inner reveal-up">
+      <div class="section-label">The Mission</div>
+      <blockquote class="mission-quote">
+        "No call for help should go unheard<br>because a network went down."
+      </blockquote>
+      <p class="mission-body">It is a non-profit space initiative building an emergency communication infrastructure that remains operational during disasters. By combining low-cost emergency devices with a future satellite mesh network, It aims to make emergency connectivity accessible when it matters most.</p>
+    </div>
+    <div class="mission-pillars">
+      <div class="pillar reveal-up" style="--d:0s">
+        <div class="pillar-num">01</div>
+        <h3>Independent</h3>
+        <p>Operates beyond terrestrial infrastructure — unaffected by local network failures</p>
+      </div>
+      <div class="pillar reveal-up" style="--d:0.12s">
+        <div class="pillar-num">02</div>
+        <h3>Accessible</h3>
+        <p>Low-cost devices designed for real communities, not just those with resources</p>
+      </div>
+      <div class="pillar reveal-up" style="--d:0.24s">
+        <div class="pillar-num">03</div>
+        <h3>Resilient</h3>
+        <p>Mesh satellite architecture ensures routing redundancy across vast distances</p>
+      </div>
+      <div class="pillar reveal-up" style="--d:0.36s">
+        <div class="pillar-num">04</div>
+        <h3>Humanitarian</h3>
+        <p>Non-profit mission — built for people, not profit</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-          <div class="timeline-phase completed reveal-phase" role="listitem">
-            <div class="phase-marker" aria-hidden="true">
-              <div class="phase-dot"></div>
-              <div class="phase-line"></div>
-            </div>
-            <div class="phase-content">
-              <div class="phase-meta">
-                <span class="phase-num">Phase 0</span>
-                <span class="phase-status">Completed</span>
-              </div>
-              <h3 class="phase-title">Mission Definition &amp; Program Foundation</h3>
-              <div class="phase-body">
-                <p>The foundation of any serious initiative is clarity of purpose. Phase 0 established the mission, vision, documentation framework, and program structure that guides everything that follows.</p>
-              </div>
-            </div>
+<section id="how">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-label">How It Works</div>
+      <h2>From crisis to response,<br>through space.</h2>
+    </div>
+    <div class="how-flow">
+      <div class="flow-step reveal-up" style="--d:0s" data-tilt>
+        <div class="flow-icon-wrap">
+          <div class="flow-icon">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/><line x1="9" y1="7" x2="15" y2="7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="9" y1="11" x2="15" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="17" r="1" fill="currentColor"/></svg>
           </div>
-
-          <div class="timeline-phase active reveal-phase" role="listitem">
-            <div class="phase-marker" aria-hidden="true">
-              <div class="phase-dot"></div>
-              <div class="phase-line"></div>
-            </div>
-            <div class="phase-content">
-              <div class="phase-meta">
-                <span class="phase-num">Phase 1</span>
-                <span class="phase-status current-status">Current</span>
-              </div>
-              <h3 class="phase-title">Ground-Level Communication Design</h3>
-              <div class="phase-body">
-                <p>Designing the communication architecture at the ground level — the protocols, frequencies, and device specifications that will form the backbone of the network before any satellite involvement.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-phase reveal-phase" role="listitem">
-            <div class="phase-marker" aria-hidden="true">
-              <div class="phase-dot"></div>
-              <div class="phase-line"></div>
-            </div>
-            <div class="phase-content">
-              <div class="phase-meta">
-                <span class="phase-num">Phase 2</span>
-              </div>
-              <h3 class="phase-title">Ground-Level Stability &amp; Reliability</h3>
-              <div class="phase-body">
-                <p>Validating and hardening the ground communication layer. The system must perform under stress, in degraded environments, and with minimal power requirements before advancing to space-level design.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-phase reveal-phase" role="listitem">
-            <div class="phase-marker" aria-hidden="true">
-              <div class="phase-dot"></div>
-              <div class="phase-line"></div>
-            </div>
-            <div class="phase-content">
-              <div class="phase-meta">
-                <span class="phase-num">Phase 3</span>
-              </div>
-              <h3 class="phase-title">Space-Level Communication Design</h3>
-              <div class="phase-body">
-                <p>Extending the communication architecture into orbit. This phase addresses the unique challenges of satellite link design, uplink/downlink protocols, and the orbital mechanics of coverage.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-phase reveal-phase" role="listitem">
-            <div class="phase-marker" aria-hidden="true">
-              <div class="phase-dot"></div>
-              <div class="phase-line"></div>
-            </div>
-            <div class="phase-content">
-              <div class="phase-meta">
-                <span class="phase-num">Phase 4</span>
-              </div>
-              <h3 class="phase-title">Spacecraft Stability Control &amp; Orbital Mechanics</h3>
-              <div class="phase-body">
-                <p>Developing the spacecraft systems required to maintain stable orbital operations — attitude control, power systems, thermal management, and the orbital mechanics necessary for continuous coverage over disaster-prone regions.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-phase reveal-phase" role="listitem">
-            <div class="phase-marker" aria-hidden="true">
-              <div class="phase-dot"></div>
-            </div>
-            <div class="phase-content">
-              <div class="phase-meta">
-                <span class="phase-num">Phase 5</span>
-              </div>
-              <h3 class="phase-title">Regulatory Compliance &amp; Launch Execution</h3>
-              <div class="phase-body">
-                <p>Navigating the regulatory environment, securing necessary approvals, and executing the launch that puts AkshaRaksha's first satellite into orbit — completing the chain from person to rescue.</p>
-              </div>
-            </div>
-          </div>
-
+        </div>
+        <div class="flow-step-num">01</div>
+        <h3>Uplink</h3>
+        <p>Individuals transmit emergency messages — SOS requests, GPS coordinates, medical emergencies — using dedicated handheld devices.</p>
+      </div>
+      <div class="flow-connector reveal-up" style="--d:0.1s">
+        <div class="flow-line"></div>
+        <div class="flow-arrow-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
       </div>
-    </section>
-
-    <!-- Progress -->
-    <section id="progress" class="section-progress" aria-labelledby="progress-heading">
-      <div class="progress-inner">
-        <div class="progress-header">
-          <div class="progress-label reveal-fade">Current Progress</div>
-          <h2 id="progress-heading" class="progress-heading reveal-up">Where We Are Now</h2>
-        </div>
-
-        <div class="progress-narrative">
-          <div class="progress-chapter reveal-left">
-            <div class="progress-chapter-marker completed-marker" aria-hidden="true"></div>
-            <div class="progress-chapter-content">
-              <h3>Foundation Complete</h3>
-              <ul class="progress-list" role="list">
-                <li>Mission definition</li>
-                <li>Vision definition</li>
-                <li>Documentation framework</li>
-                <li>Program structure</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="progress-divider" aria-hidden="true"></div>
-
-          <div class="progress-chapter reveal-up">
-            <div class="progress-chapter-marker active-marker" aria-hidden="true"></div>
-            <div class="progress-chapter-content">
-              <h3>Active Research</h3>
-              <ul class="progress-list" role="list">
-                <li>Communication architecture</li>
-                <li>System planning</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="progress-divider" aria-hidden="true"></div>
-
-          <div class="progress-chapter reveal-right">
-            <div class="progress-chapter-marker future-marker" aria-hidden="true"></div>
-            <div class="progress-chapter-content">
-              <h3>Next Horizons</h3>
-              <ul class="progress-list" role="list">
-                <li>Ground communication validation</li>
-                <li>Space adaptation</li>
-                <li>Orbital systems</li>
-              </ul>
-            </div>
+      <div class="flow-step reveal-up" style="--d:0.2s" data-tilt>
+        <div class="flow-icon-wrap">
+          <div class="flow-icon">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 2a10 10 0 0 1 0 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M12 2a10 10 0 0 0 0 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3"/><line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.5"/></svg>
           </div>
         </div>
-
-        <div class="progress-statement reveal-fade">
-          <p>AkshaRaksha is in its early research and design phase. Progress is measured not in features shipped, but in foundations built — because the mission demands precision over speed.</p>
+        <div class="flow-step-num">02</div>
+        <h3>Mesh Network</h3>
+        <p>Satellites communicate through an inter-satellite mesh, routing emergency messages efficiently across large distances with full redundancy.</p>
+      </div>
+      <div class="flow-connector reveal-up" style="--d:0.3s">
+        <div class="flow-line"></div>
+        <div class="flow-arrow-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
       </div>
-    </section>
-
-    <!-- Founder -->
-    <section id="founder" class="section-founder" aria-labelledby="founder-heading">
-      <div class="founder-inner">
-        <div class="founder-left reveal-fade">
-          <div class="founder-label">Founder</div>
-          <h2 id="founder-heading" class="founder-name">Shivaprasad V</h2>
-          <div class="founder-role">Independent Researcher and Developer</div>
-          <a href="https://spdly.is-a.dev" target="_blank" rel="noopener noreferrer" class="founder-link">spdly.is-a.dev</a>
-        </div>
-        <div class="founder-right reveal-up">
-          <p>AkshaRaksha is currently being researched, designed, and developed as an independent initiative.</p>
-          <p>The project focuses on building resilient communication systems capable of operating when conventional infrastructure becomes unavailable — a challenge that is simultaneously technical, humanitarian, and deeply personal.</p>
-          <p>This is not a company. It is not a startup. It is one person, working methodically toward a system that could one day mean the difference between silence and survival.</p>
-          <div class="founder-divider" aria-hidden="true"></div>
-          <p class="founder-transparency">AkshaRaksha is transparent about its current stage. The mission is ambitious. The timeline is long. The work is real.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section-contact" aria-labelledby="contact-heading">
-      <div class="contact-inner">
-        <div class="contact-header">
-          <div class="contact-label reveal-fade">Contact</div>
-          <h2 id="contact-heading" class="contact-heading reveal-up">Connect With The Mission</h2>
-        </div>
-        <div class="contact-body reveal-fade-delay">
-          <p>For project inquiries, research collaboration, or to follow the development of AkshaRaksha:</p>
-          <div class="contact-link-group">
-            <a href="https://spdly.is-a.dev" target="_blank" rel="noopener noreferrer" class="contact-item">
-              <span class="contact-item-label">Website</span>
-              <span class="contact-item-value">spdly.is-a.dev</span>
-            </a>
+      <div class="flow-step reveal-up" style="--d:0.4s" data-tilt>
+        <div class="flow-icon-wrap">
+          <div class="flow-icon">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M3 12l7-7 4 4 7-9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 20h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><rect x="5" y="15" width="3" height="5" stroke="currentColor" stroke-width="1.5" rx="0.5"/><rect x="10" y="12" width="3" height="8" stroke="currentColor" stroke-width="1.5" rx="0.5"/><rect x="15" y="9" width="3" height="11" stroke="currentColor" stroke-width="1.5" rx="0.5"/></svg>
           </div>
         </div>
+        <div class="flow-step-num">03</div>
+        <h3>Downlink</h3>
+        <p>The nearest operational satellite forwards messages to ground control. Responders assess, coordinate, dispatch, and monitor affected regions.</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-  </main>
+<section id="roadmap">
+  <div class="parallax-layer" data-speed="0.03"></div>
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-label">Development Roadmap</div>
+      <h2>Six phases from<br>earth to orbit.</h2>
+    </div>
+    <div class="roadmap-track">
+      <div class="roadmap-line"></div>
+      <div class="roadmap-phase done reveal-up" style="--d:0s">
+        <div class="phase-marker">
+          <div class="phase-dot"></div>
+          <div class="phase-status-badge">Completed</div>
+        </div>
+        <div class="phase-content">
+          <div class="phase-num">Phase 0</div>
+          <h3>Mission Documentation</h3>
+          <p>Mission architecture, feasibility analysis, system definition, and foundational planning.</p>
+        </div>
+      </div>
+      <div class="roadmap-phase active reveal-up" style="--d:0.1s">
+        <div class="phase-marker">
+          <div class="phase-dot"></div>
+          <div class="phase-status-badge">In Progress</div>
+        </div>
+        <div class="phase-content">
+          <div class="phase-num">Phase 1</div>
+          <h3>Ground Communication Demonstration</h3>
+          <p>Development and validation of the emergency communication framework at ground level. Current focus.</p>
+        </div>
+      </div>
+      <div class="roadmap-phase reveal-up" style="--d:0.2s">
+        <div class="phase-marker">
+          <div class="phase-dot"></div>
+        </div>
+        <div class="phase-content">
+          <div class="phase-num">Phase 2</div>
+          <h3>Ground Stabilization Demonstration</h3>
+          <p>Testing and validation of stabilization and control technologies.</p>
+        </div>
+      </div>
+      <div class="roadmap-phase reveal-up" style="--d:0.3s">
+        <div class="phase-marker">
+          <div class="phase-dot"></div>
+        </div>
+        <div class="phase-content">
+          <div class="phase-num">Phase 3</div>
+          <h3>Space Communication Development</h3>
+          <p>Transitioning communication systems toward orbital operation.</p>
+        </div>
+      </div>
+      <div class="roadmap-phase reveal-up" style="--d:0.4s">
+        <div class="phase-marker">
+          <div class="phase-dot"></div>
+        </div>
+        <div class="phase-content">
+          <div class="phase-num">Phase 4</div>
+          <h3>Orbital Systems Development</h3>
+          <p>Orbital mechanics, spacecraft stabilization, and mission integration.</p>
+        </div>
+      </div>
+      <div class="roadmap-phase reveal-up" style="--d:0.5s">
+        <div class="phase-marker">
+          <div class="phase-dot"></div>
+        </div>
+        <div class="phase-content">
+          <div class="phase-num">Phase 5</div>
+          <h3>Regulatory Approval &amp; Launch Execution</h3>
+          <p>Licensing, compliance, launch preparation, and deployment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="site-footer" role="contentinfo">
+<section id="founder">
+  <div class="founder-nebula"></div>
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-label">About the Founder</div>
+    </div>
+    <div class="founder-inner">
+      <div class="founder-portrait reveal-left">
+        <div class="portrait-glow"></div>
+        <div class="portrait-wrap">
+          <img src="assets/profile.webp" alt="Shivaprasad V" class="founder-img">
+          <div class="portrait-shimmer"></div>
+        </div>
+        <div class="founder-contact-links">
+          <a href="mailto:hello@spdly.is-a.dev" class="contact-link" title="Email">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 7l10 7 10-7" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/spdly/" target="_blank" rel="noopener" class="contact-link" title="LinkedIn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M7 10v7M7 7v.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 17v-4a2 2 0 0 1 4 0v4M11 10v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="https://www.instagram.com/spdly_studios/" target="_blank" rel="noopener" class="contact-link" title="Instagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="currentColor" stroke-width="1"/></svg>
+          </a>
+          <a href="tel:+918637488905" class="contact-link" title="Phone">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="founder-bio reveal-right">
+        <h2 class="founder-name">Shivaprasad V</h2>
+        <p class="founder-role">Founder &amp; Mission Lead, AkshaRaksha</p>
+        <p class="founder-desc">AkshaRaksha was initiated as an independent humanitarian space mission — born from a conviction that communication is not merely a convenience during disasters, but the difference between rescue and isolation.</p>
+        <p class="founder-desc">The mission bridges communication systems, embedded technologies, space engineering, and humanitarian purpose — focused on one critical challenge: ensuring that when everything else fails, a call for help can still be heard.</p>
+        <a href="https://spdly.is-a.dev" target="_blank" rel="noopener" class="founder-portfolio-link">
+          <span>Explore full portfolio</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="join">
+  <div class="join-stars" id="join-stars"></div>
+  <div class="join-glow"></div>
+  <div class="container">
+    <div class="join-inner reveal-up">
+      <div class="section-label">Join the Mission</div>
+      <h2>Be part of something<br>that matters.</h2>
+      <p>It is an independent initiative in active development. Researchers, engineers, students, organizations, mentors, and supporters who share the vision of resilient emergency communication are welcome to contribute, collaborate, and shape the future of this mission.</p>
+      <div class="join-roles">
+        <div class="role-tag">Engineers</div>
+        <div class="role-tag">Researchers</div>
+        <div class="role-tag">Students</div>
+        <div class="role-tag">Organizations</div>
+        <div class="role-tag">Mentors</div>
+        <div class="role-tag">Supporters</div>
+      </div>
+      <div class="join-actions">
+        <a href="mailto:aksharaksha@spdly.is-a.dev?subject=Collaboration%20Inquiry%20-%20AkshaRaksha" class="btn-primary btn-large">
+          Collaborate With The Mission
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="mailto:aksharaksha@spdly.is-a.dev?subject=Support%20Inquiry%20-%20AkshaRaksha" class="btn-secondary btn-large">
+          Support The Mission
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <p class="join-email"><a href="mailto:aksharaksha@spdly.is-a.dev">aksharaksha@spdly.is-a.dev</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
     <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="assets/logo.png" alt="AkshaRaksha" width="28" height="28" />
-        <div>
-          <div class="footer-name"><span class="aksha">Aksha</span><span class="raksha">Raksha</span></div>
-          <div class="footer-tagline">Keeping Hope Connected</div>
-        </div>
+      <div class="footer-logo">
+        <span class="brand-word footer-brand"><span class="aksha">Aksha</span><span class="raksha">Raksha</span></span>
+        <p>Keeping Hope Connected</p>
       </div>
-      <div class="footer-meta">
-        <p>Developed by Shivaprasad V &nbsp;·&nbsp; <a href="https://spdly.is-a.dev" target="_blank" rel="noopener noreferrer">spdly.is-a.dev</a></p>
-        <p class="footer-version">v0.1.0 &nbsp;·&nbsp; <span id="currentYear"></span></p>
+      <div class="footer-links">
+        <a href="#mission">Mission</a>
+        <a href="#how">How It Works</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#founder">Founder</a>
+        <a href="mailto:aksharaksha@spdly.is-a.dev">Contact</a>
       </div>
     </div>
-  </footer>
+    <div class="footer-bottom">
+      <p>AkshaRaksha — Independent Humanitarian Space Mission</p>
+      <p>Built for people, not profit.</p>
+    </div>
+  </div>
+</footer>
 
-  <script src="script.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
